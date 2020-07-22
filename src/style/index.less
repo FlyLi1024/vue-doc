@@ -1,0 +1,352 @@
+@import './var.less';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: @selection-background-color;
+  color: #fff;
+}
+
+// todolist
+.contains-task-list {
+  list-style-type: none;
+  padding-left: 0;
+
+  s {
+    margin-left: 10px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+    font-size: 14px;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    visibility: hidden;
+    text-decoration: underline;
+  }
+
+  input[type="checkbox"]:after {
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    top: 0;
+    content: " ";
+    color: #fff;
+    display: inline-block;
+    visibility: visible;
+    padding: 0px 2px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  input[type="checkbox"]:checked:after {
+    content: "✓";
+    font-size: 12px;
+    font-weight: 600;
+    color: @todo-color;
+    border: 1px solid @todo-color;
+    text-align: center;
+    line-height: 16px;
+  }
+}
+
+#flyli {
+  line-height: 1.7;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  color: #2c3e50;
+  font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei",
+    "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  s {
+    color: #9e9e9e;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 8px 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  a {
+    color: @a-color;
+  }
+
+  ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    color: black;
+    list-style-type: decimal;
+  }
+
+  pre[class*="language-"] {
+    background-color: @code-background-color;
+  }
+
+  code {
+    font-size: 14px;
+    word-wrap: break-word;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin: 0 2px;
+    color: @code-color;
+    background-color: @code-background-color;
+    border: 1px solid rgba(53, 104, 255, 0.1);
+    font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+    word-break: break-all;
+  }
+
+  .fli-code {
+    code {
+      background: none;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  blockquote {
+    margin: 20px 0;
+    padding: 0;
+    padding: 15px 20px;
+    background-color: @blockquote-background-color;
+    padding-bottom: 40px;
+    border: 1px solid @blockquote-border-color;
+    border-radius: 8px;
+
+    p {
+      margin: 0;
+      line-height: 1.5;
+      padding: 0 20px;
+    }
+
+    .blockquote-start {
+      color: @blockquote-start-color;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 700;
+
+    }
+
+    .blockquote-end {
+      float: right;
+      font-size: 30px;
+      color: @blockquote-end-color;
+
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    blockquote {
+      p {
+        padding: 0 15px;
+      }
+
+      .blockquote-start,
+      .blockquote-end {
+        font-size: 22px;
+      }
+    }
+  }
+
+  table {
+    border: 1px solid @table-border-color;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 14px;
+    border-left: 0;
+
+    th {
+      padding: 2px 10px;
+      background: @table-th-background-color;
+      text-align: left;
+      color: #45526b;
+      border-left: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+    }
+
+    tr {
+      background-color: rgba(239, 239, 239, 0.3);
+      line-height: 2.5;
+
+      &:nth-of-type(odd) {
+        background: #fff;
+      }
+    }
+
+    td {
+      padding: 10px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+    }
+  }
+
+  // hr
+  .customize-hr {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed @hr-border-color;
+    margin: 20px 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 30px auto;
+    padding: 0px;
+    font-weight: bold;
+    color: #515151;
+    line-height: normal;
+    font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
+      "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  h1 {
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    border-bottom: 2px solid @border-color-h2;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    &:after {
+      display: inline-block;
+      content: " ";
+      vertical-align: bottom;
+      border-bottom: 30px solid #efebe9;
+      border-right: 20px solid transparent;
+    }
+
+    .content {
+      display: inline-block;
+      font-weight: normal;
+      background: @background-color-h2;
+      color: #ffffff;
+      padding: 3px 10px 1px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    padding-bottom: 8px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    .content {
+      padding: 5px 0px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    padding: 0 5px;
+    color: #666;
+    color: @border-color-h4;
+    border-left: 3px solid @background-color-h4;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  // 自定义块
+  .custom-block {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    margin: 20px 0;
+    padding: 10px 0;
+
+    ol,
+    ul {
+      margin: 0;
+      padding-left: 15px;
+      line-height: 1.8;
+    }
+
+    code {
+      background: none;
+      padding: 0;
+    }
+
+    &-success {
+      border-color: #42b983;
+      background-color: rgba(225, 255, 227, 0.5);
+    }
+
+    &-info {
+      border-color: #3568ffb3;
+      background-color: rgba(73, 115, 243, 0.1);
+    }
+
+    &-warning {
+      border-color: #e7c000;
+      background-color: rgba(255, 229, 100, 0.2);
+    }
+
+    &-danger {
+      border-color: #cc000080;
+      background-color: rgba(255, 230, 230, 0.5);
+    }
+
+    &-tip {
+      border-color: #a7abad;
+      background-color: rgba(102, 128, 153, 0.05);
+    }
+
+    &-title {
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    &-content {
+      line-height: 1.7;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+  }
+}
