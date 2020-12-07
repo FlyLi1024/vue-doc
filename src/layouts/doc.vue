@@ -74,7 +74,8 @@ export default {
   methods: {
     custormAnchor(anchorName) {
       let anchorElement = document.getElementById(anchorName);
-      document.documentElement.scrollTop = anchorElement.offsetTop - 80;
+      anchorElement.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      // document.documentElement.scrollTop = anchorElement.offsetTop - 80;
     }
   }
 };

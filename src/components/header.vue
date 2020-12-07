@@ -86,7 +86,7 @@ export default {
 
   .logo {
     flex-shrink: 0;
-    width: 280px;
+    width: 272px;
     height: 70px;
     line-height: 70px;
     text-align: center;

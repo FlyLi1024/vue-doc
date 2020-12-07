@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background: rgba(239, 112, 96, 0.8);
+  color: #fff;
+}
+.contains-task-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contains-task-list s {
+  margin-left: 10px;
+}
+.contains-task-list input[type="checkbox"] {
+  margin-right: 8px;
+  font-size: 14px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  visibility: hidden;
+  text-decoration: underline;
+}
+.contains-task-list input[type="checkbox"]:after {
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  top: 0;
+  content: " ";
+  color: #fff;
+  display: inline-block;
+  visibility: visible;
+  padding: 0px 2px;
+  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.contains-task-list input[type="checkbox"]:checked:after {
+  content: "✓";
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(239, 112, 96, 0.6);
+  border: 1px solid rgba(239, 112, 96, 0.6);
+  text-align: center;
+  line-height: 16px;
+}
+#flyli {
+  line-height: 1.7;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  color: #2c3e50;
+  font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+@media (max-width: 768px) {
+  #flyli {
+    max-width: 100%;
+  }
+}
+#flyli img {
+  max-width: 100%;
+}
+#flyli s {
+  color: #9e9e9e;
+}
+#flyli p {
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+#flyli a {
+  color: #ef7060;
+}
+#flyli ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: black;
+  list-style-type: decimal;
+}
+#flyli pre[class*="language-"] {
+  background-color: rgba(239, 112, 96, 0.08);
+}
+#flyli code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: rgba(239, 112, 96, 0.9);
+  background-color: rgba(239, 112, 96, 0.08);
+  border: 1px solid rgba(53, 104, 255, 0.1);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+}
+#flyli .fli-code code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+#flyli blockquote {
+  margin: 20px 0;
+  padding: 0;
+  padding: 15px 20px;
+  background-color: rgba(239, 112, 96, 0.08);
+  padding-bottom: 40px;
+  border: 1px solid rgba(239, 112, 96, 0.2);
+  border-radius: 8px;
+}
+#flyli blockquote p {
+  margin: 0;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+#flyli blockquote .blockquote-start {
+  color: rgba(239, 112, 96, 0.3);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+}
+#flyli blockquote .blockquote-end {
+  float: right;
+  font-size: 30px;
+  color: rgba(239, 112, 96, 0.3);
+}
+@media (max-width: 768px) {
+  #flyli blockquote p {
+    padding: 0 15px;
+  }
+  #flyli blockquote .blockquote-start,
+  #flyli blockquote .blockquote-end {
+    font-size: 22px;
+  }
+}
+#flyli table {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 14px;
+  border-left: 0;
+}
+#flyli table th {
+  padding: 2px 10px;
+  background: rgba(239, 112, 96, 0.08);
+  text-align: left;
+  color: #45526b;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+#flyli table tr {
+  background-color: rgba(239, 239, 239, 0.3);
+  line-height: 2.5;
+}
+#flyli table tr:nth-of-type(odd) {
+  background: #fff;
+}
+#flyli table td {
+  padding: 10px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+#flyli .customize-hr {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed rgba(239, 112, 96, 0.5);
+  margin: 20px 0;
+}
+#flyli h1,
+#flyli h2,
+#flyli h3,
+#flyli h4,
+#flyli h5,
+#flyli h6 {
+  margin: 30px auto;
+  padding: 0px;
+  font-weight: bold;
+  color: #515151;
+  line-height: normal;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#flyli h1 {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  #flyli h1 {
+    font-size: 20px;
+  }
+}
+#flyli h2 {
+  font-size: 22px;
+  border-bottom: 2px solid rgba(239, 112, 96, 0.6);
+}
+@media (max-width: 768px) {
+  #flyli h2 {
+    font-size: 18px;
+  }
+}
+#flyli h2:after {
+  display: inline-block;
+  content: " ";
+  vertical-align: bottom;
+  border-bottom: 30px solid #efebe9;
+  border-right: 20px solid transparent;
+}
+#flyli h2 .content {
+  display: inline-block;
+  font-weight: normal;
+  background: rgba(239, 112, 96, 0.6);
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+#flyli h3 {
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+@media (max-width: 768px) {
+  #flyli h3 {
+    font-size: 16px;
+  }
+}
+#flyli h3 .content {
+  padding: 5px 0px;
+}
+#flyli h4 {
+  font-size: 18px;
+  padding: 0 5px;
+  color: #666;
+  color: rgba(239, 112, 96, 0.6);
+  border-left: 3px solid rgba(239, 112, 96, 0.6);
+}
+#flyli h5 {
+  font-size: 16px;
+}
+#flyli h6 {
+  font-size: 14px;
+}
+#flyli .custom-block {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+#flyli .custom-block ol,
+#flyli .custom-block ul {
+  margin: 0;
+  padding-left: 15px;
+  line-height: 1.8;
+}
+#flyli .custom-block code {
+  background: none;
+  padding: 0;
+}
+#flyli .custom-block-success {
+  border-color: #42b983;
+  background-color: rgba(225, 255, 227, 0.5);
+}
+#flyli .custom-block-info {
+  border-color: #3568ffb3;
+  background-color: rgba(73, 115, 243, 0.1);
+}
+#flyli .custom-block-warning {
+  border-color: #e7c000;
+  background-color: rgba(255, 229, 100, 0.2);
+}
+#flyli .custom-block-danger {
+  border-color: #cc000080;
+  background-color: rgba(255, 230, 230, 0.5);
+}
+#flyli .custom-block-tip {
+  border-color: #a7abad;
+  background-color: rgba(102, 128, 153, 0.05);
+}
+#flyli .custom-block-title {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+#flyli .custom-block-content {
+  line-height: 1.7;
+  padding: 0 20px;
+  font-size: 14px;
+}
