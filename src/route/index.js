@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
-import Not from '@src/layouts/404.vue';
+import Not from '@src/view/404.vue';
 import Changelog from '@guide/changelog.md';
 import Quickstart from '@guide/installation.md';
 import Introduction from '@guide/introduce.md';

@@ -8,7 +8,9 @@
     "serve": "webpack-dev-server --config build/webpack.dev.js",
     "build": "rimraf dist && webpack --config build/webpack.prod.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vant": "^3.0.0-rc.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/polyfill": "^7.10.1",

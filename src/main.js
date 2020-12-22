@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Doc from './layouts/doc.vue';
+import Doc from './view/layout.vue';
 import router from './route/index';
 import Prism from 'prismjs';
 

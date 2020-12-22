@@ -53,7 +53,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/public/index.html'),
       title: config.title,
-      inject: 'body'
+      inject: 'body',
+      favicon: path.resolve(__dirname, '../src/public/favicon.ico')
     }),
     new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin()

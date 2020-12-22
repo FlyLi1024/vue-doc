@@ -1,23 +1,22 @@
 <template>
-  <div>
-    <div class="doc-header" v-if="$parent.bodyWidth > 768">
-      <div class="logo">
-        <span>VUE-DOC</span>
-      </div>
-      <div class="search">
-        <input type="text" placeholder="待开发中..." />
-      </div>
-      <div class="nav">
-        <div class="doc-nav">
-          <div class="item"><a href="https://tstres.360kad.com/kad_design/doc/index.html">主页</a></div>
-          <div class="item"><a href="https://tstres.360kad.com/kad_design/doc/index.html">组件</a></div>
-          <div class="item"><a href="https://tstres.360kad.com/kad_design/demo/index.html" target="_blank">示例</a></div>
-          <div class="item"><a href="https://tstres.360kad.com/kad_design/demo/#/pages/index" target="_blank">页面</a></div>
-          <div class="item"><a href="https://gitlab.360kad.com/kad2.0/packages/kad-design" target="_blank">gitlab</a></div>
-        </div>
+  <div class="doc-header" v-if="$parent.bodyWidth > 768">
+    <div class="logo">
+      <span>VUE-DOC</span>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="待开发中..." />
+    </div>
+    <div class="nav">
+      <div class="doc-nav">
+        <div class="item"><a href="https://tstres.360kad.com/kad_design/doc/index.html">主页</a></div>
+        <div class="item"><a href="https://tstres.360kad.com/kad_design/doc/index.html">组件</a></div>
+        <div class="item"><a href="https://tstres.360kad.com/kad_design/demo/index.html" target="_blank">示例</a></div>
+        <div class="item"><a href="https://tstres.360kad.com/kad_design/demo/#/pages/index" target="_blank">页面</a></div>
+        <div class="item"><a href="https://gitlab.360kad.com/kad2.0/packages/kad-design" target="_blank">gitlab</a></div>
       </div>
     </div>
-    <div class="mobile-header" v-if="$parent.bodyWidth <= 768">
+  </div>
+  <!-- <div class="mobile-header" v-if="$parent.bodyWidth <= 768">
       <div class="sidebar-btn" @click="SwitchSide">
         <svg size="40" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" style="fill: rgb(255, 255, 255);">
           <path d="M96 241h320v32H96zm0-96h320v32H96zm0 192h320v32H96z"></path>
@@ -45,8 +44,7 @@
           </div>
         </transition>
       </div>
-    </div>
-  </div>
+    </div> -->
 </template>
 <script>
 export default {
@@ -70,11 +68,11 @@ export default {
 @import '../style/animation.less';
 
 .doc-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 100;
   background: #fff;
   height: 70px;
   width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <transition :name="$parent.bodyWidth < 768 ? 'fade' : ''">
       <div class="sidebar-mask" v-show="$parent.showSidebar" @click="$parent.showSidebar = false"></div>
     </transition>
@@ -65,11 +65,12 @@ export default {
   display: block;
   position: fixed;
   z-index: 99;
-  overflow: auto;
   bottom: 0;
   top: 0;
+  margin-top: 70px;
+  overflow: auto;
   width: 272px;
-  padding: 90px 0;
+  padding: 50px 0;
   background: #fff;
   border-right: 1px solid #eaecef;
   box-sizing: border-box;
